@@ -1,0 +1,20 @@
+{
+  "name": "bitty-desktop",
+  "version": "1.0.0",
+  "description": "Bitty: aprende informática paso a paso",
+  "author": "Pablo",
+  "main": "main.js",
+  "scripts": { "dist": "electron-builder --publish never" },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.pablo.bitty.desktop",
+    "productName": "Bitty",
+    "files": ["main.js", "index.html"],
+    "win": { "target": "portable" },
+    "mac": { "target": "dmg", "category": "public.app-category.education" },
+    "linux": { "target": "AppImage", "category": "Education" }
+  }
+}
